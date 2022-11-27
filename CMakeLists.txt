@@ -3,4 +3,4 @@ project(set_project)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(set_project main.cpp)
+add_executable(set_project main.cpp Set.cpp Set.h)
