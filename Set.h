@@ -5,32 +5,17 @@
 //Реализуем множество на основе двусвязного списка.
 #ifndef SET_PROJECT_SET_H
 #define SET_PROJECT_SET_H
+#include "List.h"
 
 template<class T>
-struct list{
+class Set{
 private:
-    T value;
-    list* prev;
-    list* next;
+    list<T>* begin;
+    unsigned int size;
 public:
-    explicit list(T def = T(), list* _prev = nullptr, list* _next = nullptr):
-    T(def), prev(_prev), next(_next){};
-    void set_next(list* _next){next = _next;}
-    void set_prev(list* _prev){prev = _prev;}
-    void set_value(T def = T()){value = def;}
-    T get_value() {return value;}
-};
-//Наличие элемента в списке
-template<class T>
-bool is_in_list(list<T>* begin, T val = T() ){
-    if (begin == nullptr){return false;}
-    if (begin->get_value == val){return true;}
-    return is_in_list(begin->next);
-}
-
-template<class T>
-struct Set{
-
+    bool is_empty(){
+        if (begin == nullptr){return true;}
+    }
 };
 
 
