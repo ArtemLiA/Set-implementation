@@ -54,7 +54,7 @@ void Set<T>::remove(T value) {
 
 template<class T>
 uint Set<T>::size() {
-    BTree_size(root);
+    return BTree_size(root);
 }
 
 template<class T>
