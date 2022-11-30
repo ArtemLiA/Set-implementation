@@ -115,7 +115,7 @@ bool BTree_is_in_tree(BTree<T>* root, T elem){
     if (root->value == elem){
         return true;
     }
-    return BTree(root->left, elem) || BTree(root->right, elem);
+    return BTree_is_in_tree(root->left, elem) || BTree_is_in_tree(root->right, elem);
 }
 
 //Output all elements using symmetrical traversal
