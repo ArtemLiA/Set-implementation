@@ -1,6 +1,4 @@
-//
-// Created by Liakhov Artem
-//
+g//Liakhov Artem
 
 #ifndef SET_PROJECT_SET_CPP
 #define SET_PROJECT_SET_CPP

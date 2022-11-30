@@ -1,6 +1,5 @@
-//
-// Created by Liakhov Artem
-//
+//Liakhov Artem
+
 
 //Реализуем множество на основе бинарного дерева.
 #ifndef SET_PROJECT_SET_H

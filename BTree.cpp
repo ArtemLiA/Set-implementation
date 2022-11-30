@@ -1,6 +1,4 @@
-//
-// Created by Liakhov Artem
-//
+//Liakhov Artem
 
 #ifndef SET_PROJECT_BTREE_CPP
 #define SET_PROJECT_BTREE_CPP

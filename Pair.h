@@ -1,6 +1,4 @@
-//
-// Created by Liakhov Artem
-//
+//Liakhov Artem
 
 #ifndef SET_PROJECT_PAIR_H
 #define SET_PROJECT_PAIR_H
