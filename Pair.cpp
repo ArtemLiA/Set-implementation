@@ -9,7 +9,7 @@ Pair::Pair(int _first, double _second):first(_first), second(_second){
 };
 
 std::ostream& operator<<(std::ostream& os, const Pair& p){
-    os << p.first << ';' << p.second;
+    os << '(' << p.first << ';' << p.second << ')';
     return os;
 }
 
@@ -48,6 +48,15 @@ bool operator <= (const Pair& left, const Pair& right){
 
 bool operator >= (const Pair& left, const Pair& right){
     return left > right || left == right;
+}
+
+Pair &Pair::operator=(const Pair &other) {
+    if (this == &other){
+        return *this;
+    }
+    this->first = other.first;
+    this->second = other.second;
+    return *this;
 }
 
 
