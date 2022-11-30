@@ -42,6 +42,12 @@ void Set<T>::insert(std::initializer_list<T> list){
 }
 
 template<class T>
+void Set<T>::output() {
+    BTree_print(root);
+    std::cout << std::endl;
+}
+
+template<class T>
 void Set<T>::remove(T value) {
     BTree_remove(root, value);
 }
@@ -53,7 +59,7 @@ uint Set<T>::size() {
 
 template<class T>
 bool Set<T>::is_in_set(T value) {
-    BTree_is_in_tree(root, value);
+    return BTree_is_in_tree(this->root, value);
 }
 
 template<class T>
@@ -64,6 +70,15 @@ bool Set<T>::is_empty() {
 template<class T>
 Set<T>::~Set() {
     BTree_clear(root);
+}
+
+template<class T>
+Set<T>& Set<T>::operator=(const Set<T> &right) {
+    if (this == right){
+        return *this;
+    }
+    this->root = BTree_copy(right.root);
+    return *this;
 }
 
 

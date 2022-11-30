@@ -20,11 +20,13 @@ public:
     Set(const Set& other);
     void insert(T value);
     void insert(std::initializer_list<T> list);
+    void output();
     void remove(T value);
     uint size();
     bool is_in_set(T value);
     bool is_empty();
     ~Set();
+    Set& operator=(const Set& right);
 };
 
 #include "Set.cpp"

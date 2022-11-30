@@ -1,20 +1,10 @@
 #include <iostream>
-#include "BTree.cpp"
+#include "Set.h"
 #include <vector>
 
 int main() {
-    std::vector<int> arr = {-12, 2, 0, 4, 8,-11, 10, -8, 5, 6};
-    BTree<int>* begin = nullptr;
-    for (int val: arr){
-        BTree_insert(begin, val);
-    }
-    BTree_remove(begin, 0);
-    BTree_insert(begin, 0);
-    BTree<int>* begin2 = nullptr;
-    begin2 = BTree_copy(begin);
-    BTree_clear(begin);
-    std::cout << "Second tree" << std::endl;
-    BTree_print(begin2);
-    BTree_clear(begin2);
+    Set<int> my_set = {-2, 3, 4, 0, 8};
+    my_set.insert({2, 5, 7, 9, 0, 0});
+    my_set.output();
     return 0;
 }
