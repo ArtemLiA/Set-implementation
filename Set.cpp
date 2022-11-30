@@ -1,4 +1,4 @@
-g//Liakhov Artem
+//Liakhov Artem
 
 #ifndef SET_PROJECT_SET_CPP
 #define SET_PROJECT_SET_CPP
