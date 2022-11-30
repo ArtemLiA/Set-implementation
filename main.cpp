@@ -10,9 +10,11 @@ int main() {
     }
     BTree_remove(begin, 0);
     BTree_insert(begin, 0);
-    BTree_print(begin);
-    std::cout << std::endl;
-    std::cout << "Size is " << BTree_size(begin) << std::endl;
+    BTree<int>* begin2 = nullptr;
+    begin2 = BTree_copy(begin);
     BTree_clear(begin);
+    std::cout << "Second tree" << std::endl;
+    BTree_print(begin2);
+    BTree_clear(begin2);
     return 0;
 }

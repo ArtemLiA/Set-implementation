@@ -15,6 +15,19 @@ struct BTree{
     BTree* left;
 };
 
+//Copy of tree
+template<class T>
+BTree<T>* BTree_copy(BTree<T>* other){
+    if (other == nullptr){
+        return nullptr;
+    }
+    BTree<T>* new_root = new BTree<T>;
+    new_root->value = other->value;
+    new_root->right = BTree_copy(other->right);
+    new_root->left = BTree_copy(other->left);
+    return new_root;
+}
+
 //Inserting an element to BTree
 template<class T>
 void BTree_insert(BTree<T>*& root, T elem){
@@ -129,10 +142,5 @@ void BTree_clear(BTree<T>*& root){
     delete root;
     root = nullptr;
 }
-
-
-
-
-
 
 #endif //SET_PROJECT_BTREE_CPP
