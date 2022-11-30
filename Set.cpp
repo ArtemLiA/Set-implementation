@@ -25,8 +25,20 @@ Set<T>::Set(std::initializer_list<T> list){
 }
 
 template<class T>
+Set<T>::Set(const Set<T>& other){
+    this->root = BTree_copy(other.root);
+}
+
+template<class T>
 void Set<T>::insert(T value) {
     BTree_insert(root, value);
+}
+
+template<class T>
+void Set<T>::insert(std::initializer_list<T> list){
+    for (auto val:list){
+        this->insert(val);
+    }
 }
 
 template<class T>

@@ -17,7 +17,9 @@ public:
     Set();
     explicit Set(T def);
     Set(std::initializer_list<T> list);
+    Set(const Set& other);
     void insert(T value);
+    void insert(std::initializer_list<T> list);
     void remove(T value);
     uint size();
     bool is_in_set(T value);
