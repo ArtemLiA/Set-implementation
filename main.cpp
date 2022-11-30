@@ -11,6 +11,8 @@ int main() {
     BTree_remove(begin, 0);
     BTree_insert(begin, 0);
     BTree_print(begin);
+    std::cout << std::endl;
+    std::cout << "Size is " << BTree_size(begin) << std::endl;
     BTree_clear(begin);
     return 0;
 }

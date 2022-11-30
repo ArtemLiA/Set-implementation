@@ -6,6 +6,7 @@
 #define SET_PROJECT_BTREE_CPP
 #include <iostream>
 
+typedef unsigned int uint;
 
 template<class T>
 struct BTree{
@@ -108,6 +109,15 @@ void BTree_print(BTree<T>* root){
     BTree_print(root->right);
 }
 
+//Size of binary tree
+template<class T>
+uint BTree_size(BTree<T>* root){
+    if (root == nullptr){
+        return 0;
+    }
+    return BTree_size(root->left) + BTree_size(root->right) + 1;
+}
+
 //Clear binary tree
 template<class T>
 void BTree_clear(BTree<T>*& root){
@@ -119,6 +129,7 @@ void BTree_clear(BTree<T>*& root){
     delete root;
     root = nullptr;
 }
+
 
 
 
