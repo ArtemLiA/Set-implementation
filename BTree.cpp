@@ -41,11 +41,51 @@ void BTree_insert(BTree<T>*& root, T elem){
 //Removing an element from Btree
 template<class T>
 void BTree_remove(BTree<T>*& root, T elem){
-    std::cout << "HELLO!" << std::endl;
-    return; //I will write code later
+    if (root == nullptr){
+        return;
+    }
+    if (root->value < elem){
+        BTree_remove(root->right, elem);
+        return;
+    }
+    if (root->value > elem){
+        BTree_remove(root->left, elem);
+        return;
+    }
+    //When root->value == elem
+    if (root->right == nullptr && root->left == nullptr){
+        delete root;
+        root = nullptr;
+        return;
+    }
+    if (root->right == nullptr){
+        BTree<T>* temp = root;
+        root = root->left;
+        delete temp;
+        return;
+    }
+    if (root->left == nullptr){
+        BTree<T>* temp = root;
+        root = root->right;
+        delete temp;
+        std::cout << "\nDELETED!" << std::endl;
+        return;
+    }
+    //Case when root has right and left child
+    BTree<T>* temp = root->right;
+    while(temp->left != nullptr){
+        temp = temp->left;
+    }
+    root->value = temp->value;
+    BTree<T>* clear_left = root->right;
+    while(clear_left->left != temp){
+        clear_left = clear_left->left;
+    }
+    delete temp;
+    clear_left->left = nullptr;
 }
 
-//Finding an element in BTree
+//Check is an element in BTree
 template<class T>
 bool BTree_is_in_tree(BTree<T>* root, T elem){
     if (root == nullptr){
