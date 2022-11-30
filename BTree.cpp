@@ -1,5 +1,5 @@
 //
-// Created by lyaho on 30.11.2022.
+// Created by Liakhov Artem on 30.11.2022.
 //
 
 #ifndef SET_PROJECT_BTREE_CPP
@@ -49,6 +49,14 @@ void BTree_insert(BTree<T>*& root, T elem){
         BTree_insert(root->left, elem);
         return;
     }
+}
+
+//Input from keyboard
+template<class T>
+void Btree_input(BTree<T>*& root){
+    T value;
+    std::cin >> value;
+    BTree_insert(root);
 }
 
 
