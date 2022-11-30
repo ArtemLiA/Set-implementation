@@ -1,5 +1,5 @@
 //
-// Created by Liakhov Artem on 30.11.2022.
+// Created by Liakhov Artem
 //
 
 #ifndef SET_PROJECT_BTREE_CPP

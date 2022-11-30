@@ -1,5 +1,5 @@
 //
-// Created by lyaho on 27.11.2022.
+// Created by Liakhov Artem
 //
 
 //Реализуем множество на основе бинарного дерева.
@@ -26,7 +26,6 @@ public:
     bool is_empty();
     ~Set();
 };
-
 
 #include "Set.cpp"
 #endif //SET_PROJECT_SET_H

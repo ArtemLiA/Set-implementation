@@ -1,5 +1,5 @@
 //
-// Created by lyaho on 29.11.2022.
+// Created by Liakhov Artem
 //
 
 #ifndef SET_PROJECT_SET_CPP
