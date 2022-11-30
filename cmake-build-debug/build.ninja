@@ -61,6 +61,12 @@ build CMakeFiles/set_project.dir/Set.cpp.obj: CXX_COMPILER__set_project_Debug C$
   OBJECT_DIR = CMakeFiles\set_project.dir
   OBJECT_FILE_DIR = CMakeFiles\set_project.dir
 
+build CMakeFiles/set_project.dir/BTree.cpp.obj: CXX_COMPILER__set_project_Debug C$:/Users/lyaho/CS_Projects/set_project/BTree.cpp || cmake_object_order_depends_target_set_project
+  DEP_FILE = CMakeFiles\set_project.dir\BTree.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\set_project.dir
+  OBJECT_FILE_DIR = CMakeFiles\set_project.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target set_project
@@ -69,7 +75,7 @@ build CMakeFiles/set_project.dir/Set.cpp.obj: CXX_COMPILER__set_project_Debug C$
 #############################################
 # Link the executable set_project.exe
 
-build set_project.exe: CXX_EXECUTABLE_LINKER__set_project_Debug CMakeFiles/set_project.dir/main.cpp.obj CMakeFiles/set_project.dir/Set.cpp.obj
+build set_project.exe: CXX_EXECUTABLE_LINKER__set_project_Debug CMakeFiles/set_project.dir/main.cpp.obj CMakeFiles/set_project.dir/Set.cpp.obj CMakeFiles/set_project.dir/BTree.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\set_project.dir
