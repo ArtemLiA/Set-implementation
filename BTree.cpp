@@ -82,7 +82,6 @@ void BTree_remove(BTree<T>*& root, T elem){
         BTree<T>* temp = root;
         root = root->right;
         delete temp;
-        std::cout << "\nDELETED!" << std::endl;
         return;
     }
     //Case when root has right and left child
